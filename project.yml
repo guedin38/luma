@@ -1,0 +1,30 @@
+name: LUMA
+options:
+  bundleIdPrefix: app.luma
+  deploymentTarget:
+    iOS: "15.0"
+targets:
+  LUMA:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.luma.study
+        PRODUCT_NAME: LUMA
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SWIFT_VERSION: "5.0"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    info:
+      path: Supporting/Info.plist
+      properties:
+        CFBundleDisplayName: LUMA
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        UISupportedInterfaceOrientations~ipad: [UIInterfaceOrientationPortrait, UIInterfaceOrientationPortraitUpsideDown, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
+        NSCameraUsageDescription: LUMA utilise la caméra pour scanner le code-barres d'un livre et prendre des photos de cours.
+        NSPhotoLibraryUsageDescription: LUMA accède à tes photos pour le moodboard, les souvenirs et les photos de cours.

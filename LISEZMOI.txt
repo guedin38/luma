@@ -1,0 +1,14 @@
+LUMA - construire le .ipa (sans Mac) avec GitHub, puis l'installer avec SideStore
+
+1. Crée un compte gratuit sur github.com puis un nouveau dépôt (New repository), nom : luma-ios, en "Private" si tu veux.
+2. Dans le dépôt : Add file > Upload files. Glisse TOUT le contenu de ce dossier (project.yml, Sources, Resources, Supporting, .github).
+   Si le dossier .github n'est pas pris : Add file > Create new file, nom ".github/workflows/build.yml", colle le contenu du fichier build.yml.
+3. Onglet "Actions" > "Build IPA" > "Run workflow". Attends environ 5 minutes (coche verte).
+4. Clique sur l'exécution terminée > en bas "Artifacts" > LUMA-ipa : télécharge le zip, ouvre-le pour récupérer LUMA.ipa.
+5. Envoie LUMA.ipa sur ton iPhone (AirDrop / Fichiers), puis dans SideStore : "+" > choisis LUMA.ipa.
+
+Notes
+- L'app charge ton site (https://luma-ux.netlify.app). Si ton adresse est différente, modifie la ligne siteURL au début de Sources/LumaApp.swift.
+- Sans connexion, elle ouvre la copie embarquée de LUMA (mêmes données).
+- Connecte-toi dans l'onglet Compte : les données sont à part de Safari, la synchro les remet.
+- SideStore renouvelle la signature tous les 7 jours (garde SideStore à jour).
